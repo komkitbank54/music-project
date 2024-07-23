@@ -1,0 +1,226 @@
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%; /* หรือตามที่ต้องการ */
+}
+
+.form-column,
+.form-column-spe {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* ทำให้ทุกคอลัมน์มีขนาดเท่ากัน */
+    margin-right: 20px; /* เพิ่มระยะห่างระหว่างคอลัมน์ */
+}
+
+.form-column-spe {
+    min-width: 110px;
+}
+
+.form-column:last-child {
+    margin-right: 0; /* ลบระยะห่างสำหรับคอลัมน์สุดท้าย */
+}
+
+/* Input CSS */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    line-height: 20px;
+    background: #fafafa;
+    -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    width: 220px;
+    height: 38px;
+    min-height: 38px;
+}
+
+/* สไตล์เฉพาะสำหรับ Input การค้นหา */
+input.search-input {
+    width: 340px;
+    height: 38px;
+    border-radius: 2px;
+    min-height: 2px;
+}
+
+input.search-input:hover {
+    font-size: 18px;
+}
+
+textarea {
+    min-height: 340px;
+}
+
+input.error,
+textarea.error,
+select.error {
+    border: 1px solid red; /* Simple way to highlight errors */
+}
+
+input:disabled,
+textarea:disabled {
+    background: #dfdfdf;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: rgb(160, 160, 160);
+}
+
+.textarea-label {
+    position: absolute;
+    left: 15px;
+    top: 7%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: rgb(160, 160, 160);
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -8px;
+    left: 5px;
+    font-size: smaller;
+    color: rgb(0, 0, 0);
+}
+
+.input-field:focus + .textarea-label,
+.input-field:not(:placeholder-shown) + .textarea-label {
+    top: -8px;
+    left: 5px;
+    font-size: smaller;
+    color: rgb(0, 0, 0);
+}
+
+.input-field {
+    padding: 10px;
+    padding-top: 20px; /* Make space for the label */
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.select-label {
+    position: absolute;
+    left: 15px; /* Adjust based on padding */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: rgb(160, 160, 160);
+}
+
+.select-field:focus + .select-label,
+.select-field:valid + .select-label {
+    top: -8px; /* Adjust this value based on your design */
+    left: 5px;
+    font-size: smaller;
+    color: rgb(0, 0, 0);
+}
+
+.select-field {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    height: 38px; /* Adjust based on your line-height */
+    background: #fafafa;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    color: #666;
+    transition: all 0.4s ease;
+    width: 220px;
+}
+
+.search-button {
+    background-color: #007bff; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    border: none; /* ลบเส้นขอบ */
+    padding: 8px 10px 8px 10px; /* ขนาด padding */
+    margin-left: 8px; /* ระยะห่างจาก input */
+    cursor: pointer; /* เปลี่ยน cursor เมื่อ hover */
+    border-radius: 5px; /* มุมโค้ง */
+    transition: background-color 0.3s; /* การเปลี่ยนแปลงที่ลื่นไหล */
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* สีเมื่อ hover */
+}
+
+/* ปรับแต่ง Container สำหรับ Checkbox */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* หรือ space-between ตามที่คุณต้องการ */
+    align-items: center;
+}
+
+/* สไตล์สำหรับ Custom Checkbox */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fafafa;
+    border: 2px solid #dcdcdc; /* สีขอบ Checkbox */
+    padding: 9px; /* ขนาด Checkbox */
+    border-radius: 3px; /* มุมโค้ง */
+    display: inline-block;
+    position: relative;
+    margin-right: 5px; /* ระยะห่างระหว่าง Checkbox กับข้อความ */
+    cursor: pointer;
+    vertical-align: middle; /* จัดให้อยู่ในตำแหน่งกลางแนวตั้งเมื่ออยู่ข้างๆข้อความ */
+}
+
+/* แสดงเครื่องหมายถูกเมื่อ Checkbox ถูกเลือก */
+.custom-checkbox:checked::before {
+    content: "\2714"; /* Unicode สำหรับเครื่องหมายถูก */
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    color: #007bff; /* สีของเครื่องหมายถูก */
+}
+
+/* เปลี่ยนสีขอบเมื่อ Checkbox ถูก focus หรือ hover */
+.custom-checkbox:focus,
+.custom-checkbox:hover {
+    border-color: #007bff; /* สีขอบเมื่อ focus หรือ hover */
+}
+
+.checkbox-label {
+    margin-left: 5px; /* ตั้งค่าระยะห่างจาก Checkbox */
+    font-size: 14px; /* ปรับขนาดข้อความให้เหมาะสม */
+}

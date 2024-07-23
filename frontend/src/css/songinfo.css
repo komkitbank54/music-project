@@ -1,0 +1,85 @@
+.detail-container {
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0px 60px 0px 60px;
+    background: white;
+    width: 800px;
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.detail-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.detail-column {
+    display: flex;
+    flex: 1;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image {
+    margin: 40px;
+    border-radius: 8px;
+    width: auto;
+    max-width: 240px;
+    height: 200px;
+}
+
+.detail-box {
+    width: 800px;
+    margin: 0px 60px 40px 60px;
+    padding: 12px;
+    min-height: 180px;
+    color: black;
+    z-index: 1;
+    background-color: white; /* Light grey background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.detail-box:hover,
+.detail-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.detail-box h2 {
+    border-bottom: 1px solid black;
+    padding: 8px;
+    margin-left: 22px;
+    margin-right: 22px;
+    text-align: start;
+}
+
+.detail-box label {
+    display: block;
+    text-align: center;
+}
+
+.detail-box span {
+    display: block;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.iframe-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%; /* Adjust based on your layout needs */
+    display: flex;
+    justify-content: center; /* Centers the iframe horizontally */
+}
+

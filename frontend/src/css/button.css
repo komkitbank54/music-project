@@ -1,0 +1,98 @@
+.AddBtn{
+    cursor: pointer;
+    display: flex;
+    border-radius: 0.5rem;
+    width: 32px;
+    height: auto;
+  }
+  
+  .btn,.menu-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: flex;
+    padding: 4px 16px 4px 16px;
+    color: #000000;
+    font-weight: 600;
+    border-radius: 24px;
+    transition: all 0.25s;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    border: 1px solid black;
+  }
+
+  .btn.red {
+    color: red;
+    border: 1px solid red;
+  }
+
+  :hover.btn{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 18px;
+  }
+
+  .submenu-btn{
+    color: white;
+    transition: all 0.25s;
+  }
+
+  :hover.submenu-btn{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+  }
+
+  .smicon {
+    height: 12px;
+    width: 12px;
+    margin-left: 3px;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.25s;
+}
+
+:hover.menu-btn{
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+}
+
+.btn:active,.menu-btn:active,.submenu-btn:active {
+  animation: jello-horizontal 0.6s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+    /* border: 1px solid aqua;
+    background: linear-gradient(90deg, rgba(66,226,175,1) 0%, rgba(0,212,255,1) 100%); */
+  }
+}

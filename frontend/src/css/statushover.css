@@ -1,0 +1,39 @@
+.status{
+    display: block;
+    transform: translate(0, 0);
+    text-align: center;
+    align-items: center;
+    margin: 16px;
+    padding-top: 12px;
+}
+
+.status .glow-wrap{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+}
+
+.status .glow{
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,.2);
+    top: -50px;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.status:hover .glow{
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.status:hover img,
+.status:hover .glow-wrap{
+    margin-top: 0;
+}

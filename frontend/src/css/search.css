@@ -1,0 +1,32 @@
+.search-panel {
+    position: fixed;
+    top: 116px;
+    right: -100%; /* ซ่อน panel โดยการเลื่อนออกจากขอบขวา */
+    width: 300px; /* กำหนดความกว้างของ panel */
+    height: 100%;
+    background: white;
+    box-shadow: -10px 0 15px -10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* เอฟเฟกต์การเลื่อน */
+    z-index: 999;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.search-panel.open {
+    right: 0; /* เลื่อน panel เข้ามาในหน้าจอ */
+    padding-bottom: 140px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.search-results {
+    margin-top: 40px;
+}

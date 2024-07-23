@@ -1,0 +1,20 @@
+    useEffect(() => {
+        setAlertTimer();
+    }, []);
+    // ฟังก์ชันสำหรับตั้งเวลา alert สำหรับแต่ละเวลาที่กำหนด
+    const setAlertTimer = () => {
+        const alertTimes = [{ hour: 15, minute: 31 }, { hour: 15, minute: 32 }, { hour: 15, minute: 33 }];
+        alertTimes.forEach((time) => {
+            const now = new Date();
+            const targetTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), time.hour, time.minute, 0);
+            
+            let timeToWait = targetTime - now;
+            if (timeToWait < 0) {
+            timeToWait += 86400000; // ถ้าเวลาผ่านไปแล้ว, ตั้งเวลาสำหรับวันถัดไป
+            }
+
+            setTimeout(() => {
+            alert(`เวลาที่กำหนด (${time.hour}:${time.minute}) ได้ถึงแล้ว!`);
+            }, timeToWait);
+        });
+        };

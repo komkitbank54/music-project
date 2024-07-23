@@ -1,0 +1,34 @@
+.bars {
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    gap: 0.19rem;
+    height: 2rem;
+  }
+  
+  .bars__item {
+    animation: play 1.25s ease-out infinite;
+    background-image: linear-gradient(to top, rgb(14 165 233), rgb(99 102 241));
+    width: 0.5rem;
+  }
+  
+  /* แต่ละ bars__item จะมีความสูงตามลำดับของมัน */
+  .bars__item {
+    height: calc(50% + var(--heightAdjust, 0%));
+  }
+  
+  @keyframes play {
+    0%, 100% {
+      height: 10%;
+    }
+    25% {
+      height: 75%;
+    }
+    50% {
+      height: 50%;
+    }
+    75% {
+      height: 100%;
+    }
+  }
+  

@@ -1,0 +1,76 @@
+.t {
+    margin: 20px 20px 40px 20px;
+    width: auto;
+    border-radius: 10px;
+    background-color: white; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    align-content: center;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.t:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.tHead, .tBody {
+    display: block;
+}
+
+.tHead {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #aad2ff;
+}
+
+.tHead .tCell {
+    display: flex; /* ทำให้เซลล์เป็น Flex Container */
+    justify-content: center; /* จัดให้ข้อความอยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้ข้อความอยู่ตรงกลางแนวตั้ง */
+    text-align: center; /* จัดให้ข้อความอยู่ตรงกลาง */
+}
+
+.tBody {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.tRow {
+    display: flex;
+    width: auto;
+}
+
+.tRow:nth-child(even) {
+    background-color: #e9feff;
+    
+}
+
+.tCell {
+    flex: 1;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto;
+    border-left: 1px solid  #e9feff;
+    /* border: 1px solid red; */
+}
+
+.tCell:nth-child(1) { flex: 2; }
+.tCell:nth-child(2) { flex: 2; }
+.tCell:nth-child(3) { flex: 1; }
+.tCell:nth-child(4) { flex: 2; }
+.tCell:nth-child(5) { flex: 3; }
+.tCell:nth-child(6) { flex: 3; }
+.tCell:nth-child(7) { flex: 1; }
+
+.tCell.article { text-align: start; }
+
+.table-icon {
+    width: 25px; /* กำหนดความกว้างของรูปภาพ */
+    height: auto; /* ให้สูงตามอัตราส่วน */
+}

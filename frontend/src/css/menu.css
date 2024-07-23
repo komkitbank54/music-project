@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(
+        90deg,
+        rgba(230, 255, 247, 1) 5%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(232, 251, 255, 1) 95%
+    );
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensures the navbar is above other content */
+    background-color: #fff; /* Or your desired background */
+    /* Add other styling as needed */
+}
+
+.menu {
+    background: rgb(159, 217, 255);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 12px;
+    justify-content: space-between;
+    z-index: 2000;
+}
+
+.menu-text {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.bordertest {
+    border: 1px solid red;
+}
+
+.submenu {
+    background: black;
+    padding: 4px 0px 4px 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transform: translateY(-30px);
+    transition: transform 0.5s, visibility 0.5s;
+    height: 36px;
+}
+
+.submenu.show {
+    transform: translateY(0px);
+}

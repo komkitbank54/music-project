@@ -1,0 +1,43 @@
+/* Add this to your CSS file */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  white-space: nowrap;
+  visibility: hidden;
+  width: auto;
+
+  opacity: 0.85;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  /* Position the tooltip text on the left */
+  position: absolute;
+  z-index: 1;
+  top: 80%;
+  right: 100%;
+  transform: translate(0, -50%);
+  margin-right: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Arrow is right-aligned with the tooltip */
+  margin-top: -7px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black; /* Arrow pointing to the right */
+  transform: translate(0, -50%);
+}

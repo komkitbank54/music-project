@@ -1,0 +1,63 @@
+
+.tabs {
+    display: flex;
+    position: absolute;
+    float: top;
+    margin-top: -58.6px;
+    margin-left: -16px;
+  }
+  
+.tabs button {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 36px 8px 36px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(172, 172, 172);
+    color: white;
+  }
+  
+.tabs button:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+}
+
+.tabs button:last-child {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0;
+}
+
+.tabs button.active,
+.tabs button:focus {
+    background-color: white;
+    color: black;
+    cursor: default;
+  }
+
+  
+.tab {
+  display: flex;
+  position: absolute;
+  float: top;
+  margin-top: -55.8px;
+  margin-left: -16px;
+}
+
+.tab button {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 42px 8px 42px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(172, 172, 172);
+  color: white;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.tab button.active,
+.tab button:focus {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
