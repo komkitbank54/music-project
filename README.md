@@ -1,5 +1,5 @@
 
-# 🎵 Music Recommendation System
+# 🎵 Music Recommendation Website
 
 This project is a web application that uses **ReactJS** for the frontend and **Flask** for the backend.
 
